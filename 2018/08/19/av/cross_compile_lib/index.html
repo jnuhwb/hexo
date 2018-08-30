@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="NSMutableAttributedString可以做字体描边，不过出来的效果是center描边，如果想要描边+填充，NSStrokeWidthAttributeName用负数 12文档描述UIKIT_EXTERN NSAttributedStringKey const NSStrokeWidthAttributeName NS_AVAILABLE(10_0, 6_0);         //">
+<meta name="description" content="C++支持头文件位置 extra-cflags -I（大写i）Header Search Paths 表态库位置 ld-flags -L   Other Link Flags 指定库 -l（小写L）  Link Binary With Library 宏定义 extra-cflags -DAUTO_TEST相当于#define AUTO_TEST   Other C Flags 编译LAME库LA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="text stroke">
-<meta property="og:url" content="http://yoursite.com/2018/07/28/ios/ios_text_stroke/index.html">
+<meta property="og:title" content="交叉编译">
+<meta property="og:url" content="http://yoursite.com/2018/08/19/av/cross_compile_lib/index.html">
 <meta property="og:site_name" content="每天进步一点点">
-<meta property="og:description" content="NSMutableAttributedString可以做字体描边，不过出来的效果是center描边，如果想要描边+填充，NSStrokeWidthAttributeName用负数 12文档描述UIKIT_EXTERN NSAttributedStringKey const NSStrokeWidthAttributeName NS_AVAILABLE(10_0, 6_0);         //">
+<meta property="og:description" content="C++支持头文件位置 extra-cflags -I（大写i）Header Search Paths 表态库位置 ld-flags -L   Other Link Flags 指定库 -l（小写L）  Link Binary With Library 宏定义 extra-cflags -DAUTO_TEST相当于#define AUTO_TEST   Other C Flags 编译LAME库LA">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-18T13:01:23.524Z">
+<meta property="og:updated_time" content="2018-08-30T00:43:04.785Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="text stroke">
-<meta name="twitter:description" content="NSMutableAttributedString可以做字体描边，不过出来的效果是center描边，如果想要描边+填充，NSStrokeWidthAttributeName用负数 12文档描述UIKIT_EXTERN NSAttributedStringKey const NSStrokeWidthAttributeName NS_AVAILABLE(10_0, 6_0);         //">
+<meta name="twitter:title" content="交叉编译">
+<meta name="twitter:description" content="C++支持头文件位置 extra-cflags -I（大写i）Header Search Paths 表态库位置 ld-flags -L   Other Link Flags 指定库 -l（小写L）  Link Binary With Library 宏定义 extra-cflags -DAUTO_TEST相当于#define AUTO_TEST   Other C Flags 编译LAME库LA">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/28/ios/ios_text_stroke/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/19/av/cross_compile_lib/"/>
 
 
 
 
 
-  <title>text stroke | 每天进步一点点</title>
+  <title>交叉编译 | 每天进步一点点</title>
   
 
 
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/28/ios/ios_text_stroke/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/19/av/cross_compile_lib/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wellbin Huang">
@@ -259,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">text stroke</h1>
+          <h1 class="post-title" itemprop="name headline">交叉编译</h1>
         
 
         <div class="post-meta">
@@ -271,8 +271,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-28T16:26:04+08:00">
-                2018-07-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-19T00:29:31+08:00">
+                2018-08-19
               </time>
             
 
@@ -294,8 +294,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/iOS/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS</span>
+                  <a href="/categories/音视频/" itemprop="url" rel="index">
+                    <span itemprop="name">音视频</span>
                   </a>
                 </span>
 
@@ -331,9 +331,53 @@
       
 
       
-        <p><code>NSMutableAttributedString</code>可以做字体描边，不过出来的效果是center描边，如果想要描边+填充，NSStrokeWidthAttributeName用负数</p>
-<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">文档描述</span><br><span class="line">UIKIT_EXTERN NSAttributedStringKey const NSStrokeWidthAttributeName NS_AVAILABLE(<span class="number">10_0</span>, <span class="number">6_0</span>);         // NSNumber containing floating point value, <span class="keyword">in</span> percent <span class="keyword">of</span> font point size, <span class="keyword">default</span> <span class="number">0</span>: no stroke; <span class="built_in">positive</span> <span class="keyword">for</span> stroke alone, negative <span class="keyword">for</span> stroke <span class="keyword">and</span> fill (a typical value <span class="keyword">for</span> outlined <span class="literal">text</span> would be <span class="number">3.0</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">代码</span><br><span class="line">        <span class="built_in">NSMutableAttributedString</span> *ms = [[<span class="built_in">NSMutableAttributedString</span> alloc] initWithString:<span class="keyword">self</span>.info.text];</span><br><span class="line">        [ms addAttribute:<span class="built_in">NSStrokeColorAttributeName</span> value:[<span class="built_in">UIColor</span> whiteColor] range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, ms.length)];</span><br><span class="line">        [ms addAttribute:<span class="built_in">NSStrokeWidthAttributeName</span> value:@(<span class="number">-10.0</span>) range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, ms.length)];</span><br><span class="line">        [ms addAttribute:<span class="built_in">NSForegroundColorAttributeName</span> value:[<span class="built_in">UIColor</span> colorWithHexString:<span class="keyword">self</span>.info.RGBHexTextColor] range:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, ms.length)];</span><br><span class="line">        <span class="keyword">self</span>.textView.attributedText = ms;</span><br></pre></td></tr></table></figure>
+        <h4 id="C-支持"><a href="#C-支持" class="headerlink" title="C++支持"></a>C++支持</h4><p>头文件位置 extra-cflags -I（大写i）Header Search Paths</p>
+<p>表态库位置 ld-flags -L   Other Link Flags</p>
+<p>指定库 -l（小写L）  Link Binary With Library</p>
+<p>宏定义 extra-cflags -DAUTO_TEST相当于#define AUTO_TEST   Other C Flags</p>
+<h4 id="编译LAME库"><a href="#编译LAME库" class="headerlink" title="编译LAME库"></a>编译LAME库</h4><p>LAME库是目前MP3编码引擎的最优选择，码率达到320Kbps时媲美CD音质</p>
+<p><a href="https://sourceforge.net/projects/lame/files/lame/" target="_blank" rel="noopener">SourceForge下载LAME源码</a></p>
+<p><a href="https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/build-lame.sh" target="_blank" rel="noopener">编译脚本</a></p>
+<p><a href="https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/lame-3.100-libs.zip" target="_blank" rel="noopener">lame-3.100最终lib下载地址</a></p>
+<h4 id="GNU标准configure命令"><a href="#GNU标准configure命令" class="headerlink" title="GNU标准configure命令"></a>GNU标准configure命令</h4><p>configure生成Makefile，然后make编译，make install安装</p>
+<p>–prefix： 编译结果库存放目录，如果不配置该选项，安装后可执行文件默认放在/usr/local/bin，库文件默认放在/usr/local/lib，配置文件默认放在/usr/local/etc，其它的资源文件放在/usr /local/share</p>
+<p>–host： 库要运行的平台 arm-apple-darwin</p>
+<p>CC：  交叉编译工具，gcc路径</p>
+<p>CFLAGS：  编译参数，Mac常见参数 -arch armv7 -fembed-bitcode -miphoneos-version-min=7.0 -mios-simulator-version-min=7.0</p>
+<p>LDFLAGS：  链接参数，同上</p>
+<p>–disable-shared：  关闭动态链接库</p>
+<p>–disable-frontend：  不编译出可执行文件</p>
+<h4 id="编译FDK-AAC"><a href="#编译FDK-AAC" class="headerlink" title="编译FDK_AAC"></a>编译FDK_AAC</h4><p>源码： <a href="https://sourceforge.net/p/opencore-amr/fdk-aac/ci/" target="_blank" rel="noopener">https://sourceforge.net/p/opencore-amr/fdk-aac/ci/</a></p>
+<p>preprocessor： <a href="https://github.com/applexiaohao/gas-preprocessor" target="_blank" rel="noopener">https://github.com/applexiaohao/gas-preprocessor</a></p>
+<p>github上的脚本： <a href="https://github.com/kewlbear/fdk-aac-build-script-for-iOS" target="_blank" rel="noopener">https://github.com/kewlbear/fdk-aac-build-script-for-iOS</a></p>
+<p><a href="https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/build-fdk-aac.sh" target="_blank" rel="noopener">抄了一个编译脚本</a></p>
+<p><a href="https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/opencore-amr-fdk-aac-lib.zip" target="_blank" rel="noopener">最终lib下载地址</a></p>
+<h4 id="Autotools"><a href="#Autotools" class="headerlink" title="Autotools"></a>Autotools</h4><p><a href="https://digitalleaves.com/blog/2017/12/build-cross-platform-c-project-autotools/" target="_blank" rel="noopener">How To Build A Cross-Platform C++ Project With Autotools</a></p>
+<p>autogen.sh 生成configure，</p>
+<p>brew install automake autoconf libtool</p>
+<p>In order to prevent conflicts with Apple’s own libtool we have prepended a “g”</p>
+<p>so, you have instead: glibtool and glibtoolize.</p>
+<p>automake –version </p>
+<p>automake (GNU automake) 1.16.1 </p>
+<p>autoconf –version</p>
+<p>autoconf (GNU Autoconf) 2.69</p>
+<p>glibtool –version</p>
+<p>glibtool (GNU libtool) 2.4.6</p>
+<h4 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h4><p>Install Homebrew</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/usr/</span>bin<span class="regexp">/ruby -e "$(curl -fsSL https:/</span><span class="regexp">/raw.githubusercontent.com/</span>Homebrew<span class="regexp">/install/m</span>aster<span class="regexp">/install)"</span></span><br></pre></td></tr></table></figure>
+<p>Uninstall Homebrew</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/usr/</span>bin<span class="regexp">/ruby -e "$(curl -fsSL https:/</span><span class="regexp">/raw.githubusercontent.com/</span>Homebrew<span class="regexp">/install/m</span>aster<span class="regexp">/uninstall)"</span></span><br></pre></td></tr></table></figure>
+<h4 id="编译X264"><a href="#编译X264" class="headerlink" title="编译X264"></a>编译X264</h4><p>官网：<a href="http://www.videolan.org/developers/x264.html" target="_blank" rel="noopener">http://www.videolan.org/developers/x264.html</a> </p>
+<p>源码： <a href="ftp://ftp.videolan.org/pub/x264/snapshots/last_x264.tar.bz2" target="_blank" rel="noopener">ftp://ftp.videolan.org/pub/x264/snapshots/last_x264.tar.bz2</a></p>
+<p>github上有很多mirror，<a href="https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/last_x264.tar.bz2" target="_blank" rel="noopener">下载</a></p>
+<p><a href="https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/build-x264.sh" target="_blank" rel="noopener">编译脚本</a></p>
+<p><a href="https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/x264-libs.zip" target="_blank" rel="noopener">最终lib下载地址</a></p>
+<p>测试音频</p>
+<p><a href="https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/testcase.mp3" target="_blank" rel="noopener">https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/testcase.mp3</a></p>
+<p><a href="https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/testcase.wav" target="_blank" rel="noopener">https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/testcase.wav</a></p>
+<p><a href="https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/Frank%20Sinatra%20-%20I%20Love%20You%20www.my-free-mp3.net%20.mp3" target="_blank" rel="noopener">https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/Frank%20Sinatra%20-%20I%20Love%20You%20www.my-free-mp3.net%20.mp3</a></p>
+<p><a href="https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/a.mp4" target="_blank" rel="noopener">https://picture-1253690096.cos.ap-guangzhou.myqcloud.com/libs/a.mp4</a></p>
+
       
     </div>
     
@@ -357,8 +401,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/28/ios/ios_memory/" rel="next" title="iOS内存">
-                <i class="fa fa-chevron-left"></i> iOS内存
+              <a href="/2018/08/18/av/video_induction/" rel="next" title="视频入门">
+                <i class="fa fa-chevron-left"></i> 视频入门
               </a>
             
           </div>
@@ -366,10 +410,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/12/av/audio_induction/" rel="prev" title="音频入门">
-                音频入门 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -421,8 +461,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -473,6 +522,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#C-支持"><span class="nav-number">1.</span> <span class="nav-text">C++支持</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译LAME库"><span class="nav-number">2.</span> <span class="nav-text">编译LAME库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GNU标准configure命令"><span class="nav-number">3.</span> <span class="nav-text">GNU标准configure命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译FDK-AAC"><span class="nav-number">4.</span> <span class="nav-text">编译FDK_AAC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Autotools"><span class="nav-number">5.</span> <span class="nav-text">Autotools</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Homebrew"><span class="nav-number">6.</span> <span class="nav-text">Homebrew</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译X264"><span class="nav-number">7.</span> <span class="nav-text">编译X264</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
